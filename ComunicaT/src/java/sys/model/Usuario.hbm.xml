@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 07-ago-2020 22:38:21 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="sys.model.Usuario" table="usuario" catalog="comunicat" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="rolId" type="int">
+            <column name="rolId" not-null="true" />
+        </property>
+        <property name="nombre" type="string">
+            <column name="nombre" not-null="true" />
+        </property>
+        <property name="apellidoPaterno" type="string">
+            <column name="apellidoPaterno" not-null="true" />
+        </property>
+        <property name="apellidoMaterno" type="string">
+            <column name="apellidoMaterno" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" not-null="true" />
+        </property>
+        <property name="contrase&#195;&#177;a" type="string">
+            <column name="contrase&#195;&#177;a" not-null="true">
+                <comment>encriptada</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>
